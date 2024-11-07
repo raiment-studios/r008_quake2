@@ -1,0 +1,19 @@
+[package]
+name = "r008_quake2"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+bevy = "0.14.2"
+bevy_math = "0.14.2"
+bevy_mod_raycast = "0.18.0"
+byteorder = "1.5.0"
+rand = "0.8.5"
+thiserror = "1.0.68"
+wasm-bindgen = "0.2.95"
+web-sys = { version = "0.3.72", features = ["Window", "Document", "Element", "HtmlCanvasElement", "DomRect"] }
+
+

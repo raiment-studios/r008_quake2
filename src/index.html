@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <style>
+            * {
+                outline: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #111;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                margin: 32px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <canvas
+                id="app-canvas"
+                width="1200"
+                height="600"
+                style="border: solid 1px #333; border-radius: 12px"
+            ></canvas>
+        </div>
+        <script type="module">
+            // Kick off the main application.  Note that we use the "start"
+            // function rather than relying on "main" so that we can pass
+            // arguments to it.
+            const go = async () => {
+                let mod = await import('./r008_quake2.js');
+                await mod.default();
+                mod.start(`app-canvas`);
+            };
+            go();
+
+            // Quick and dirty "hot-reloading" implementation:
+            //
+            // The build process writes out a build timestamp on each build,
+            // so poll the server for any changes to that file.
+            let cache = null;
+            let current = null;
+            const check = async () => {
+                try {
+                    const resp = await fetch('./build-timestamp.txt');
+                    if (resp.ok) {
+                        current = await resp.text();
+                        current = current.trim();
+                        document.title = `${document.title} [${current}]`;
+                        if (!cache) {
+                            cache = current;
+                        } else if (cache !== current) {
+                            setTimeout(() => location.reload(), 100);
+                        }
+                    }
+                } catch (err) {
+                    console.log('Ignoring error', err);
+                }
+                setTimeout(check, 200 + 600 * Math.random());
+            };
+            setTimeout(check, 2000);
+        </script>
+    </body>
+</html>

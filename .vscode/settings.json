@@ -1,0 +1,14 @@
+{
+    "deno.enable": true,
+    "editor.inlayHints.fontFamily": "Courier New",
+    "editor.inlayHints.fontSize": 9,
+    "workbench.colorCustomizations": {
+        "editorInlayHint.foreground": "#e7a0cecc",
+        "editorInlayHint.background": "#0000"
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#2db762"
+    },
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "rust-analyzer.lens.enable": false,
+  }

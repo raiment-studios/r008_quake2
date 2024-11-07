@@ -1,0 +1,80 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@gnome/ansi@0.2": "0.2.0",
+    "jsr:@gnome/chars@0.2": "0.2.0",
+    "jsr:@gnome/env@0.4": "0.4.0",
+    "jsr:@gnome/errors@0.3": "0.3.0",
+    "jsr:@gnome/fmt@^0.0.0": "0.0.0",
+    "jsr:@gnome/process@^0.0.0": "0.0.0",
+    "jsr:@gnome/runtime-info@0.1": "0.1.0",
+    "jsr:@gnome/slices@^0.0.0": "0.0.0",
+    "jsr:@gnome/strings@0.3": "0.3.0",
+    "jsr:@std/encoding@~0.224.3": "0.224.3"
+  },
+  "jsr": {
+    "@gnome/ansi@0.2.0": {
+      "integrity": "9c549c536652cc41cbfb9e6b90a27850f72720977c4177b7d33f3fc2f8d5e6bb",
+      "dependencies": [
+        "jsr:@gnome/env",
+        "jsr:@gnome/fmt",
+        "jsr:@gnome/process",
+        "jsr:@gnome/runtime-info",
+        "jsr:@gnome/strings"
+      ]
+    },
+    "@gnome/chars@0.2.0": {
+      "integrity": "3ec89a3ac96d79c5d562bd711c70e1eb25036e097c28934ba3c674f847111c56"
+    },
+    "@gnome/env@0.4.0": {
+      "integrity": "8fb1272cdeaafa42b82456c8c70cbe2c0e63e174af3afc2befd5877caccd95ae",
+      "dependencies": [
+        "jsr:@gnome/chars",
+        "jsr:@gnome/runtime-info",
+        "jsr:@gnome/strings",
+        "jsr:@std/encoding"
+      ]
+    },
+    "@gnome/errors@0.3.0": {
+      "integrity": "89741eac97cd1c70e37eefcfc08a0e650d9c09db03fc86bc1cb7a517a1cb6871"
+    },
+    "@gnome/fmt@0.0.0": {
+      "integrity": "e8b05f23945c09919a92156453b5007a28b4b3ad0982dd862179d4fd1450c740",
+      "dependencies": [
+        "jsr:@gnome/process"
+      ]
+    },
+    "@gnome/process@0.0.0": {
+      "integrity": "25e061bae420a60ded858982f2e568f8d5c9298514bd9bccb0a58aa41e0dbf8b"
+    },
+    "@gnome/runtime-info@0.1.0": {
+      "integrity": "d27fcbde87a9ac1769f3a3b79d27d970e8788f8d0cbb5fdc99bd81826060c987"
+    },
+    "@gnome/slices@0.0.0": {
+      "integrity": "b34d87b04a2bd096a28dd68a24772fd3870513a80fc0d9f083c95c1130b74a23",
+      "dependencies": [
+        "jsr:@gnome/chars",
+        "jsr:@gnome/errors",
+        "jsr:@gnome/fmt",
+        "jsr:@gnome/runtime-info"
+      ]
+    },
+    "@gnome/strings@0.3.0": {
+      "integrity": "4e495093dd4b992d1ff67e319cf6f6ab536b8adb61261bd64014d1c5ffa4a897",
+      "dependencies": [
+        "jsr:@gnome/slices"
+      ]
+    },
+    "@std/encoding@0.224.3": {
+      "integrity": "5e861b6d81be5359fad4155e591acf17c0207b595112d1840998bb9f476dbdaf"
+    }
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:nodemon@^3.1.7",
+        "npm:serve@^14.2.4"
+      ]
+    }
+  }
+}
